@@ -1,0 +1,4 @@
+instance-type:t3.nano
+key-name:devops
+image-id:ami-0b5eea76982371e91
+security-group:["sg-0f61e17bea84f65dc"]
