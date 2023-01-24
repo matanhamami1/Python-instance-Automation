@@ -1,0 +1,11 @@
+terminator.py 
+
+ 
+
+This module will terminate all the user's ec2 instances that were created more than a week ago. You will get this information from the instance's "date" tag, which you created on the first module.  
+
+You should be prepared for the case that someone wrote the date tag in the wrong format, or that it does not exist. In that case, the program will not raise an exception, but ignore this instance. For example, if the date format you chose is "2023-11-02", and one instance's date tag is "2.11.2022", this instance will not be deleted but ignored, and the program will continue. 
+
+The module will print the ids of the instances that were terminated. 
+
+After executing this module, you should see that the instances that were created more than a week ago are terminated on AWS. 
