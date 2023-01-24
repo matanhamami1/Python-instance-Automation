@@ -1,0 +1,31 @@
+creator.py 
+
+ 
+This module will create 512MB EC2 instances.  
+The script will ask for the user to enter the number of instances he wants to create. It will create them and print their private IP addresses. 
+
+The instances will follow these specifications: 
+
+Their name will be "web<instance's serial number>". For example, the first instance's name will be "web1", the second's name will be "web2" and so on. 
+
+Their image will be Linux 2. 
+
+User data will be used to run an Apache server on each instance. The user data should be read from a file you will create: "user-data.sh".  
+
+The user will be able to access each web server at the page "index.html", that will present a sentence of your choice. Reminder: Do not forget to open the relevant ports! You can use an existing security group for that purpose. 
+
+Each instance will have a "date" tag (in a format of your choice), which will contain the date the instance was created on. 
+
+The following specifications will not be determined in the code but in the file "configuration.txt". Its structure is as follows: 
+
+instance-type: <value> 
+key-name: <value> 
+image-id: <value> 
+security-group: <value> 
+
+<value> will be replaced with the value of this field. For example: 
+
+instance-type: t3.nano
+
+You may assume that the file's structure is permanent and that there are no missing values.  
+After executing this module, you should see on AWS the new instances, and be able to connect them.  
